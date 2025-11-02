@@ -40,15 +40,15 @@ This project provides an intelligent job application management system that:
 ### Technical Architecture Philosophy
 This project demonstrates production-grade software engineering practices:
 
-**Event-Driven Architecture**: Kafka decouples job saving from AI analysis, ensuring the system remains responsive even during heavy AI processing.
+1. **Event-Driven Architecture**: Kafka decouples job saving from AI analysis, ensuring the system remains responsive even during heavy AI processing.
 
-**Caching Strategy**: Redis intelligently caches AI analysis results. If you apply to similar backend engineering roles, the system reuses previous analysis, dramatically reducing latency and API costs.
+2. **Caching Strategy**: Redis intelligently caches AI analysis results. If you apply to similar backend engineering roles, the system reuses previous analysis, dramatically reducing latency and API costs.
 
-**Microservices Design**: The consumer service runs independently from the API, allowing horizontal scaling. If AI analysis becomes a bottleneck, you can deploy multiple consumer instances.
+3. **Microservices Design**: The consumer service runs independently from the API, allowing horizontal scaling. If AI analysis becomes a bottleneck, you can deploy multiple consumer instances.
 
-**Real-Time Data Extraction**: Content scripts scrape LinkedIn job postings in real-time, demonstrating web scraping techniques and DOM manipulation.
+4. **Real-Time Data Extraction**: Content scripts scrape LinkedIn job postings in real-time, demonstrating web scraping techniques and DOM manipulation.
 
-**API-First Design**: The backend exposes RESTful endpoints, making it easy to build additional frontends (mobile app, React dashboard) without changing backend logic.
+5. **API-First Design**: The backend exposes RESTful endpoints, making it easy to build additional frontends (mobile app, React dashboard) without changing backend logic.
 
 ### Target Users
 - **Job Seekers**: Recent graduates, career changers, or anyone applying to multiple positions
