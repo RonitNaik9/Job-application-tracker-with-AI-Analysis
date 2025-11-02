@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Job Tracker</h2>
+    
+    <!-- Auth Section -->
+    <div id="auth-section">
+      <h3>Login</h3>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <p id="auth-error" class="error"></p>
+    </div>
+
+    <!-- Main Section (hidden initially) -->
+    <div id="main-section" style="display: none;">
+      
+      <!-- Tab Navigation -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="resume">Resume</button>
+        <button class="tab-btn" data-tab="job">Save Job</button>
+      </div>
+
+      <!-- Resume Tab -->
+      <div id="resume-tab" class="tab-content active">
+        <div id="no-resume">
+          <p>No resume uploaded yet</p>
+          <input type="file" id="resume-file" accept=".pdf" />
+          <button id="upload-resume-btn">Upload Resume</button>
+        </div>
+        
+        <div id="has-resume" style="display: none;">
+          <p>✅ Resume uploaded</p>
+          <p id="resume-filename"></p>
+          <button id="update-resume-btn">Update Resume</button>
+          <input type="file" id="resume-file-update" accept=".pdf" style="display: none;" />
+        </div>
+        
+        <p id="resume-status"></p>
+      </div>
+
+      <!-- Job Tab -->
+      <div id="job-tab" class="tab-content">
+         <div id="auto-fill-indicator" style="display: none; background: #d4edda; padding: 10px; margin-bottom: 10px; border-radius: 4px; color: #155724;">
+            ✨ Job details auto-filled from LinkedIn
+        </div>
+        <input type="text" id="company" placeholder="Company Name" />
+        <input type="text" id="job-title" placeholder="Job Title" />
+        <input type="url" id="job-url" placeholder="Job URL" />
+        <textarea id="job-description" placeholder="Job Description" rows="5"></textarea>
+        <input type="text" id="location" placeholder="Location (optional)" />
+        <input type="text" id="salary" placeholder="Salary Range (optional)" />
+        <input type="date" id="date-applied" />
+        <button id="save-job-btn">Save Application</button>
+        <p id="job-status"></p>
+      </div>
+
+      <button id="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
