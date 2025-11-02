@@ -34,8 +34,6 @@ This project provides an intelligent job application management system that:
 - Browse LinkedIn → Click extension → Job saved automatically (10 seconds)
 - AI instantly analyzes resume fit and provides improvement suggestions
 - Track all applications in one place with status updates
-- View analytics on response rates by company size, job type, etc.
-- Total time: ~30 minutes/week
 
 ### Technical Architecture Philosophy
 This project demonstrates production-grade software engineering practices:
